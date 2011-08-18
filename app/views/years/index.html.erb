@@ -1,0 +1,16 @@
+<div id="header">
+  <h1>Photo Gallery</h1>
+</div>
+
+<div id="content">
+  <ul class="list">
+    <% @years.each do |year, events| %>
+      <li>
+        <%= link_to h(year.to_s + ' (' + events.length.to_s + ' events)'), year_path(year) %>
+      </li>
+    <% end %>
+  </ul>
+  <ul class="list">
+    <li><%= link_to h('Tag list'), tags_path %></li>
+  </ul>
+</div>

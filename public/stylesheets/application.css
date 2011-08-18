@@ -1,0 +1,129 @@
+ul.photos {
+  margin: 0;
+  padding: 0;
+  text-indent: 0;
+  list-style-type: none;
+}
+ul.photos img {
+  border: 1px solid #999999;
+  padding: 5px;
+  background: white;
+  display: block;
+  margin-left: auto;  
+  margin-right: auto; 
+}
+
+ul.photos li {
+  display: inline-block;
+  vertical-align: top;
+  width: 220px;
+  height: 250px;
+}
+
+.pagination {
+    font-size: 20px;
+    font-weight: bold;
+	text-shadow: 0px 1px 0px #fff;
+}
+
+.pagination span {
+	color: #666666;
+}
+.pagination a:link {
+	color: #000;
+    text-decoration: none;
+}
+.pagination a:active {
+	color: #000;
+    text-decoration: none;
+}
+.pagination a:visited {
+	color: #000;
+    text-decoration: none;
+}
+.pagination a:hover {
+	color: #000;
+    text-decoration: none;
+    background-color: transparent;
+}
+.previous_page {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.next_page {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+body {
+    background-color: #ddd; /* Background color */
+    color: #222;            /* Foreground color used for text */
+    font-family: Helvetica; 
+    font-size: 14px;
+    margin: 0;              /* Amount of negative space around the outside of the body */
+    padding: 0;             /* Amount of negative space around the inside of the body */
+}
+#content {
+  padding: 10px;
+  margin-left: auto ;
+  margin-right: auto ;
+  max-width: 740px;	
+  text-align: center;
+}
+#content img {
+	max-width: 740px;
+}
+#header h1 {
+    margin: 0;
+    padding: 0;
+	background-color: #ccc;
+    border-bottom: 1px solid #666;
+    color: #222;
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+	text-shadow: 0px 1px 0px #fff;
+    background-image: -webkit-gradient(linear, left top, left bottom, 
+                                       from(#ccc), to(#999));
+}
+ul.list {
+    list-style: none;
+    margin: 10px;
+    padding: 0;
+  text-align: left;
+}
+ul.list li a {
+    background-color: #FFFFFF;
+    border: 1px solid #999999;
+    color: #222222;
+    display: block;
+    margin-bottom: -1px;
+    padding: 8px 6px;
+    text-decoration: none;
+	overflow: auto;
+}
+ul.list li:first-child a {
+    -webkit-border-top-left-radius: 8px;
+    -webkit-border-top-right-radius: 8px;
+}
+ul.list li:last-child a {
+    -webkit-border-bottom-left-radius: 8px;
+    -webkit-border-bottom-right-radius: 8px;
+}
+ul.list img {
+	position: absolute;
+	clip: rect(0px,150px,150px,0px);
+}
+div.ev {
+	height: 150px;
+	width: 170px;
+	display: block;
+	float: left;
+}
+
+

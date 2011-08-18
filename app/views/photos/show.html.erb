@@ -1,0 +1,40 @@
+<div id="header">
+  <h1><%= h( get_parent_name + " (" + @index.to_s + "/" + @last_index.to_s + ")" ) %></h1>
+</div>
+
+<div id="content">
+  <div class="pagination">
+	
+	<%= if @index > 1
+			link_to h("<"), get_photo_path(@index-1), :class => "previous_page" 
+		else
+			'<span class="previous_page disabled"><</span>'.html_safe
+		end %>
+	<%= if @index < @last_index
+			link_to h(">"), get_photo_path(@index+1), :class => "next_page"
+		else
+			'<span class="next_page disabled">></span>'.html_safe
+		end %>
+
+  </div>
+  <p>
+    <%= image_tag photo_path(@photo) %>
+  </p>
+
+<p>
+  <b>Event:</b>
+  <%= link_to h(@photo.event.name), event_path(@photo.event) %>
+</p>
+
+<p>
+  <b>Tags:</b>
+  <% @photo.tags.each do |tag| %>
+    <%= link_to h(tag.name), tag_path(tag) %>
+  <% end %>
+</p>
+
+  <ul class="list">
+    <li><%= link_to h('Up'), get_parent_path(:page => @page) %></li>
+    <li><%= link_to h('Top'), years_path %></li>
+  </ul>
+</div>

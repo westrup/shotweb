@@ -1,0 +1,7 @@
+.bundle
+.project
+db/*.sqlite3
+log/*.log
+tmp/
+.tmp*~
+public/photos/

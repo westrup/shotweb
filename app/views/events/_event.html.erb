@@ -1,0 +1,6 @@
+<li>
+  <%= link_to '<div class="ev">'.html_safe + image_tag(thumb_path(event.primary_source, :size => 200)) + '</div>'.html_safe +
+	event.name + 
+	'<br/>('.html_safe + pluralize(event.photos.length, 'photo') + ')<br/>'.html_safe + 
+	date_interval(event.start_date, event.end_date), event_path(event) %>
+</li>

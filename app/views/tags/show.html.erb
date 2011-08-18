@@ -1,0 +1,16 @@
+<div id="header">
+  <h1><%= h( @tag.name + " (" + @photos.current_page.to_s + "/" + @photos.total_pages.to_s + ")" ) %></h1>
+</div>
+
+<div id="content">
+<%= will_paginate @photos, :previous_label => "<", :next_label => ">", :page_links => false %>
+
+<ul class="photos">
+  <%= render @photos %>
+</ul>
+
+  <ul class="list">
+    <li><%= link_to h('All tags'), tags_path %></li>
+    <li><%= link_to h('Top'), years_path %></li>
+  </ul>
+</div>

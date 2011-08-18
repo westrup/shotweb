@@ -1,0 +1,14 @@
+<div id="header">
+  <h1><%= h(@year) %></h1>
+</div>
+
+<div id="content">
+  <ul class="list">
+    <%= render @events %>
+  </ul>
+
+  <ul class="list">
+    <li><%= link_to h('Up'), years_path %></li>
+    <li><%= link_to h('Tag list'), tags_path %></li>
+  </ul>
+</div>
