@@ -95,7 +95,8 @@ ul.list {
     list-style: none;
     margin: 10px;
     padding: 0;
-  text-align: left;
+    text-align: left;
+	font-size: 16px;
 }
 ul.list li a {
     background-color: #FFFFFF;
@@ -118,6 +119,7 @@ ul.list li:last-child a {
 ul.list img {
 	position: absolute;
 	clip: rect(0px,150px,150px,0px);
+	border: 0px;
 }
 div.ev {
 	height: 150px;

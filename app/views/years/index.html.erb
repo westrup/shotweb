@@ -6,7 +6,8 @@
   <ul class="list">
     <% @years.each do |year, events| %>
       <li>
-        <%= link_to h(year.to_s + ' (' + events.length.to_s + ' events)'), year_path(year) %>
+		<%= link_to '<div class="ev">'.html_safe + image_tag(thumb_path(events.first.primary_source, :size => 200)) + '</div>'.html_safe +
+	        year.to_s + '<br/>('.html_safe + pluralize(events.length, 'event') + ')<br/>'.html_safe, year_path(year) %>
       </li>
     <% end %>
   </ul>
