@@ -3,7 +3,7 @@ class Event < ActiveRecord::Base
   has_many :photos
   
   def primary_source
-    Photo.find(Integer("0x" + primary_source_id.split("thumb")[1]))
+    Photo.find(Integer("0x" + primary_source_id.split("thumb")[1])) || photos.first
   end
   
   def name
